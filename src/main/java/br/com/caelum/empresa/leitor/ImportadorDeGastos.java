@@ -17,9 +17,9 @@ public class ImportadorDeGastos {
 
 	private SimpleDateFormat df = new SimpleDateFormat("ddMMyyyy");
 
-	public LinkedHashSet<Gasto> importa(InputStream entrada) throws ParseException {
+	public Set<Gasto> importa(InputStream entrada) throws ParseException {
 		Scanner leitor = new Scanner(entrada);
-		LinkedHashSet<Gasto> gastos = new LinkedHashSet<Gasto>();
+		Set<Gasto> gastos = new LinkedHashSet<Gasto>();
 
 		while (leitor.hasNextLine()) {
 			String line = leitor.nextLine();
