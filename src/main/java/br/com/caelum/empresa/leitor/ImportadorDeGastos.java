@@ -3,10 +3,12 @@ package br.com.caelum.empresa.leitor;
 import java.io.InputStream;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collection;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Scanner;
+import java.util.Set;
 
 import br.com.caelum.empresa.modelo.Funcionario;
 import br.com.caelum.empresa.modelo.Gasto;
@@ -15,9 +17,9 @@ public class ImportadorDeGastos {
 
 	private SimpleDateFormat df = new SimpleDateFormat("ddMMyyyy");
 
-	public List<Gasto> importa(InputStream entrada) throws ParseException {
+	public LinkedHashSet<Gasto> importa(InputStream entrada) throws ParseException {
 		Scanner leitor = new Scanner(entrada);
-		List<Gasto> gastos = new ArrayList<Gasto>();
+		LinkedHashSet<Gasto> gastos = new LinkedHashSet<Gasto>();
 
 		while (leitor.hasNextLine()) {
 			String line = leitor.nextLine();
@@ -47,5 +49,30 @@ public class ImportadorDeGastos {
 		Calendar dataNascimento = Calendar.getInstance();
 		dataNascimento.setTime(df.parse(dataNascTxt));
 		return dataNascimento;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((df == null) ? 0 : df.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		ImportadorDeGastos other = (ImportadorDeGastos) obj;
+		if (df == null) {
+			if (other.df != null)
+				return false;
+		} else if (!df.equals(other.df))
+			return false;
+		return true;
 	}
 }

@@ -13,9 +13,9 @@ public class TesteImportador {
 	public static void main(String[] args) throws UnsupportedEncodingException,
 			ParseException {
 		String conteudo = 
-				"CARTAO01012011000010000123Jose da Silva                 22071983\r\n" +
-				"CARTAO01012011000010000123Jose da Silva                 22071983\r\n" +
-				"CARTAO01012011000010000123Jose da Silva                 22071983\r\n";
+                "CARTAO01012011000010000123Jose da Silva                 22071983\r\n" +
+                "CARTAO01012011000010000123Jose da Silva                 22071983\r\n" +
+                "CARTAO01012011000010000123Jose da Silva                 22071983\r\n";
 
 		ImportadorDeGastos importador = new ImportadorDeGastos();
 
