@@ -10,8 +10,8 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
 
+import br.com.caelum.empresa.dao.Gasto;
 import br.com.caelum.empresa.modelo.Funcionario;
-import br.com.caelum.empresa.modelo.Gasto;
 
 public class ImportadorDeGastos {
 

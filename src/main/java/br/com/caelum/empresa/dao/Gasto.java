@@ -1,6 +1,8 @@
-package br.com.caelum.empresa.modelo;
+package br.com.caelum.empresa.dao;
 
 import java.util.Calendar;
+
+import br.com.caelum.empresa.modelo.Funcionario;
 
 public class Gasto {
 

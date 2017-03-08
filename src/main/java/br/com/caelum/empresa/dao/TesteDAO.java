@@ -2,7 +2,6 @@ package br.com.caelum.empresa.dao;
 
 import java.util.*;
 
-import br.com.caelum.empresa.modelo.Gasto;
 
 public class TesteDAO {
 	public static void main(String[] args) {

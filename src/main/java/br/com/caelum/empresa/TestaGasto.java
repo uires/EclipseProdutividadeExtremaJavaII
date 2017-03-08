@@ -3,8 +3,8 @@ package br.com.caelum.empresa;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
+import br.com.caelum.empresa.dao.Gasto;
 import br.com.caelum.empresa.modelo.Funcionario;
-import br.com.caelum.empresa.modelo.Gasto;
 
 public class TestaGasto {
 

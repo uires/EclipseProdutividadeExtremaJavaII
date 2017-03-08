@@ -1,7 +1,6 @@
 package br.com.caelum.empresa.dao;
 
 import java.util.List;
-import br.com.caelum.empresa.modelo.Gasto;
 import com.sun.istack.internal.logging.Logger;
 
 public class GastoDAO {
