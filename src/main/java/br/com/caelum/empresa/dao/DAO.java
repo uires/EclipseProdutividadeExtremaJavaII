@@ -1,6 +1,7 @@
 package br.com.caelum.empresa.dao;
 
 import java.util.List;
+import java.util.logging.Logger;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
@@ -9,6 +10,7 @@ import br.com.caelum.empresa.modelo.Gasto;
 
 public class DAO<T> {
 
+	
 	public DAO(Class <T> classe) {
 		super();
 		this.classe = classe;
