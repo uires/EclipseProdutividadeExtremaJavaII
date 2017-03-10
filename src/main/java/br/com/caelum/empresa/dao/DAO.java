@@ -12,7 +12,7 @@ public class DAO<T> {
 	
 	public DAO(Class <T> classe) {
 		super();
-		this.classe = classe;
+		//this.classe = classe;
 	}
 
 	private final EntityManager entityManager = new JPAUtil().getEntityManager();
